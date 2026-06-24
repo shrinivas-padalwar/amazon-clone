@@ -1,7 +1,7 @@
 *{
     margin: 0;
     font-family: Arial;
-    border: border-box;
+    box-sizing: border-box;
 }
 .navbar{
     height: 60px;
@@ -126,8 +126,8 @@
 /**box 7**/
 .navbar-cart{
     display: flex;
-    width: 80;
-    height: 50;
+    width: 80px;
+    height: 50px;
     justify-content: center;
     align-items: center;
 }
@@ -274,5 +274,74 @@ ul{
 }
 .copyright{
     padding-top: 5px;
+}
+/* ── TABLET (max 768px) ── */
+@media (max-width: 768px) {
+
+  /* navbar */
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  /* make search bar full width */
+  .navbar-search {
+    width: 100%;
+    order: 3; /* moves search below logo row */
+  }
+
+  /* hide address and language on tablet */
+  .navbar-add,
+  .navbar-language {
+    display: none;
+  }
+
+  /* shop boxes — 2 per row on tablet */
+  .box {
+    width: 45%;
+  }
+
+  /* footer links stack */
+  .foot-panel2 {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+}
+
+/* ── MOBILE (max 480px) ── */
+@media (max-width: 480px) {
+
+  /* hide panel options — too cramped */
+  .panel-opt {
+    display: none;
+  }
+
+  /* shop boxes — 1 per row on mobile */
+  .box {
+    width: 90%;
+  }
+
+  /* hero shorter on mobile */
+  .hero-section {
+    height: 200px;
+  }
+
+  /* hero message smaller text */
+  .hero-msg {
+    font-size: 0.75rem;
+    height: auto;
+    padding: 8px;
+    text-align: center;
+  }
+
+  /* signin and returns side by side */
+  .navbar-signin,
+  .navbar-returns {
+    width: auto;
+  }
 }
 
